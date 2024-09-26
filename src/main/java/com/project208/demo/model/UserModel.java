@@ -24,4 +24,5 @@ public class UserModel {
     private String password;
     @DBRef
     private List<JournalModel> journalEntries = new ArrayList<>();
+    private List<String> roles = new ArrayList<>();
 }

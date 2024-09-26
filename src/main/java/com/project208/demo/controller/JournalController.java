@@ -75,7 +75,7 @@ public class JournalController {
     ){
         JournalModel old = journalServices.findJournalById(id).orElse(null);
         if(old != null){
-            old.setName(newEntry.getName() != null && !newEntry.getName().equals("") ? newEntry.getName() : old.getName());
+            old.setTitle(newEntry.getTitle() != null && !newEntry.getTitle().equals("") ? newEntry.getTitle() : old.getTitle());
             old.setContent(newEntry.getContent() != null && !newEntry.getContent().equals("") ? newEntry.getContent() : old.getContent());
             journalServices.saveJournalEntry(old);
             return new ResponseEntity<>(old, HttpStatus.OK);

@@ -16,6 +16,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class JournalModel {
     @Id
     private ObjectId id;
-    private String name;
+    private String title;
     private String content;
 }
